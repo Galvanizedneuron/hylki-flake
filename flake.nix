@@ -27,7 +27,7 @@
       }: {
         rust-project.toolchain = pkgs.rust-bin.stable.latest.default;
         rust-project.src = lib.cleanSource ./.;
-        rust-project.crates.vireo.crane.args = {
+        rust-project.crates.hylki.crane.args = {
           buildInputs = with pkgs; [
             cairo
             dbus
@@ -45,7 +45,7 @@
         make-shells.default.inputsFrom = [self'.packages.hylki];
         packages.default = self'.packages.hylki;
 
-        apps.vireo.program = "${self'.packages.hylki}/bin/hylki";
+        apps.hylki.program = "${self'.packages.hylki}/bin/hylki";
         apps.default = self'.apps.hylki;
       };
       flake = {
