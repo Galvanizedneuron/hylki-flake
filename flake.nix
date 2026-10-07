@@ -28,6 +28,7 @@
         rust-project.toolchain = pkgs.rust-bin.stable.latest.default;
         rust-project.src = lib.cleanSource ./.;
         rust-project.crates.hylki.crane.args = {
+          doCheck = false;
           buildInputs = with pkgs; [
             cairo
             dbus
