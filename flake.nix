@@ -1,5 +1,5 @@
 {
-  description = "Vireo is a clean, fast, GNOME-native email client with a calm three-pane layout, unified inbox, and support for OAuth accounts. Fast to open, effortless to read, and private by default.";
+  description = "Hylki is a clean, fast, GNOME-native email client with a calm three-pane layout, unified inbox, and support for OAuth accounts. Fast to open, effortless to read, and private by default.";
 
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -42,11 +42,11 @@
           ];
           nativeBuildInputs = with pkgs; [(lib.getDev glib) pkg-config];
         };
-        make-shells.default.inputsFrom = [self'.packages.vireo];
-        packages.default = self'.packages.vireo;
+        make-shells.default.inputsFrom = [self'.packages.hylki];
+        packages.default = self'.packages.hylki;
 
-        apps.vireo.program = "${self'.packages.vireo}/bin/vireo";
-        apps.default = self'.apps.vireo;
+        apps.vireo.program = "${self'.packages.hylki}/bin/hylki";
+        apps.default = self'.apps.hylki;
       };
       flake = {
       };
